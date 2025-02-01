@@ -1,0 +1,50 @@
+.h3 {
+    font-weight: 300;
+}
+
+#root {
+    max-width: calc(min(1280px, 100vw) - 25px);
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+}
+
+.output {
+    font-size: var(--font-size-caption);
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+
+button {
+    position: relative;
+}
+
+button.copied::after {
+    content: "Copied!";
+    color: #646cff;
+    font-size: 0.8em;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: .2rem;
+}
+
+input {
+    font-family: 'Noto Serif', 'Noto Serif KR', serif;
+    max-width: 95%;
+}
+
+input::placeholder {
+    font-family: 'Noto Serif', 'Noto Serif KR', serif;
+}
+div.input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+    flex-wrap: wrap;
+}
+#output {
+    font-style: italic;
+}
