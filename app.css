@@ -3,9 +3,9 @@
 }
 
 #root {
-    max-width: calc(min(1280px, 100vw) - 25px);
+    max-width: calc(min(1280px, 100vw) - 0px);
     margin: 0 auto;
-    padding: 10px;
+    padding: 1vmin;
     text-align: center;
 }
 
@@ -20,7 +20,7 @@ button {
 }
 
 button.copied::after {
-    content: "Copied!";
+    content: attr(data-content);
     color: #646cff;
     font-size: 0.8em;
     position: absolute;
@@ -28,6 +28,7 @@ button.copied::after {
     left: 50%;
     transform: translateX(-50%);
     margin-top: .2rem;
+    white-space: nowrap;
 }
 
 input {
@@ -47,5 +48,17 @@ div.input {
 }
 #output {
     font-style: italic;
-    font-weight: 900;
+    font-weight: 700;
+}
+.history {
+    position: absolute;
+    top: calc(50dvh + 250px);
+    padding: 0 1vmin 25dvh 1vmin;
+}
+.history li {
+    font-size: var(--font-size-caption);
+    font-style: italic;
+    line-height: 2.5;
+    list-style: none;
+    text-align: center;
 }
